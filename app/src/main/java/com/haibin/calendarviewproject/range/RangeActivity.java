@@ -197,8 +197,13 @@ public class RangeActivity extends BaseActivity implements
      */
     @Override
     public boolean onCalendarIntercept(Calendar calendar) {
-        return false;
-        //return calendar.getTimeInMillis()<getCurrentDayMill() ;
+        int day = calendar.getDay();
+
+        if (day == 12 || day == 21) {
+            return false;
+        } else {
+            return true;
+        }        //return calendar.getTimeInMillis()<getCurrentDayMill() ;
     }
 
 

@@ -108,9 +108,9 @@ public abstract class RangeMonthView extends BaseMonthView {
         if (mDelegate.mSelectedStartRangeCalendar == null) {
             return false;
         }
-        if (onCalendarIntercept(calendar)) {
-            return false;
-        }
+//        if (onCalendarIntercept(calendar)) {// 注释此代码，为了画不能选中的日期
+//            return false;
+//        }
         if (mDelegate.mSelectedEndRangeCalendar == null) {
             return calendar.compareTo(mDelegate.mSelectedStartRangeCalendar) == 0;
         }
